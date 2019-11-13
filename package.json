@@ -1,0 +1,29 @@
+{
+  "name": "applitools-hackathon",
+  "version": "1.0.0",
+  "description": "A demo WDIO Test Framework for Applitools Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test:traditional:v1": "wdio ./config/traditional/v1.conf.js",
+    "test:traditional:v2": "wdio ./config/traditional/v2.conf.js",
+    "test:visual:v1": "wdio ./config/visual/v1.conf.js",
+    "test:visual:v2": "wdio ./config/visual/v2.conf.js"
+  },
+  "keywords": [],
+  "author": "Paul Farrell",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/applitools-service": "^5.13.2",
+    "@wdio/cli": "^5.15.6",
+    "@wdio/dot-reporter": "^5.15.2",
+    "@wdio/local-runner": "^5.15.6",
+    "@wdio/mocha-framework": "^5.15.1",
+    "@wdio/spec-reporter": "^5.15.2",
+    "@wdio/sync": "^5.15.7",
+    "chai": "^4.2.0",
+    "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^78.0.1",
+    "lodash": "^4.17.15",
+    "wdio-chromedriver-service": "^5.0.2"
+  }
+}

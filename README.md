@@ -1,2 +1,1 @@
-# applitools-hackathon
-
+npm install
