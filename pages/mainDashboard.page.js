@@ -1,10 +1,13 @@
 class MainDashboard {
     // Main Dashboard Elements:
+    get $compareExpensesButton() { return $("#showExpensesChart") };
     get $transactionTable() { return $("#transactionsTable") };
     get $amountTableHeader() { return $("#amount") };
     get $$amounts() { return $$(".text-right") };
     get $$tableRows() { return $$("#transactionsTable tbody tr") };
-
+    get $gifCyberMondayFlashSale() { return $("#flashSale img") };
+    get $gifFlashSale() { return $("#flashSale2 img") };
+    
     // Main Dashboard Functions:
     getNumericalAmountValues() {
         // Get all the Table Data values, unfortunately the Table Header "AMOUNTS" is included in this.
@@ -14,40 +17,39 @@ class MainDashboard {
         // The first element in the array is our Table Header, let's remove that.
         rawNumericAmounts.shift();
 
-        const trueNumericAmounts = rawNumericAmounts.map(function(amount) {
+        return rawNumericAmounts.map(function(amount) {
             return parseFloat(amount
-            .replace("+", "") // Remove any "+" symbols
-            .replace("USD", "") // Remove "USD" from all values
-            .replace(",", "") // Remove commas from larger numbers
-            .replace("- ", "-") // Remove the space after the negative symbol
-            .trim() // Remove any whitespace before or after the values
-            ); // Convert the result to a Float
+                .replace("+", "") // Remove any "+" symbols
+                .replace("USD", "") // Remove "USD" from all values
+                .replace(",", "") // Remove commas from larger numbers
+                .replace("- ", "-") // Remove the space after the negative symbol
+                .trim()// Remove any whitespace before or after the values
+            ); // The result is converted to a Float Point Number  
         });
-        return trueNumericAmounts;
     };
-
+     
     getTableRow(description) {
         return this.$$tableRows.find(function(row) {
             return row.getText().includes(description);
         });
     };
-
+            
     getStatus(description) {
-		return this.getTableRow(description).$$("td")[0].getText();
+        return this.getTableRow(description).$$("td")[0].getText();
     };
-    
+            
     getDate(description) {
-		return this.getTableRow(description).$$("td")[1].getText();
+        return this.getTableRow(description).$$("td")[1].getText();
     };
-    
+            
     getCategory(description) {
-		return this.getTableRow(description).$$("td")[3].getText();
+        return this.getTableRow(description).$$("td")[3].getText();
     };
-    
+            
     getAmount(description) {
-		return this.getTableRow(description).$$("td")[4].getText();
+        return this.getTableRow(description).$$("td")[4].getText();
     };
-    
+            
     getAllTableData(description) {
         const tableData = {
             "description": description,
@@ -56,9 +58,11 @@ class MainDashboard {
             "category": this.getCategory(description),
             "amount": this.getAmount(description)
         };
-        return tableData;
+    return tableData;
     };
-    
-};
 
+
+
+};
+    
 module.exports = new MainDashboard;

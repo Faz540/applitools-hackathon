@@ -12,11 +12,11 @@ class Actions {
     };
             
     scrollToElement(element) {
-        return browser.scroll(element.selector);
+        return browser.scroll(element);
     };
     
     getClassesForElement(element) {
-        return $(element.selector).getAttribute("class").split(" ");
+        return $(element).getAttribute("class").split(" ");
     };
     
     getPageTitle() {
@@ -28,7 +28,7 @@ class Actions {
     };
     
     getElementAttribute(element, nameOfAttribute) {
-        return $(element.selector).getAttribute(nameOfAttribute);
+        return $(element).getAttribute(nameOfAttribute);
     };
 };
 

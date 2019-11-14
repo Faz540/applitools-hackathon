@@ -1,4 +1,6 @@
 const waitUntil = require("../utils/waits");
+let version;
+process.env.VERSION ? version = process.env.VERSION : version = "";
 
 class LoginPage {
     // Login Page Elements:
@@ -16,13 +18,13 @@ class LoginPage {
     get $twitterImageLink() { return $("img[src*='twitter']") };
     get $facebookImageLink() { return $("img[src*='facebook']") };
     get $linkedInImageLink() { return $("img[src*='linkedin']") };
-
+    
     // Login Page Functions:
     open() {
-        browser.url("");
+        browser.url(`/hackathon${version}.html?showAd=true`);
         return waitUntil.elementIsDisplayed(this.$loginButton);
-    }
-
+    };
+    
     submitForm(username, password) {
         this.$username.setValue(username);
         this.$password.setValue(password);

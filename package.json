@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:traditional:v1": "wdio ./config/traditional/v1.conf.js",
-    "test:traditional:v2": "wdio ./config/traditional/v2.conf.js",
+    "test:traditional:v2": "VERSION=V2 wdio ./config/traditional/v2.conf.js",
     "test:visual:v1": "wdio ./config/visual/v1.conf.js",
     "test:visual:v2": "wdio ./config/visual/v2.conf.js"
   },
