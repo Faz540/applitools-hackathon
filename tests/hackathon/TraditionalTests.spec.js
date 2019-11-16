@@ -8,7 +8,7 @@ const compareExpensesPage = require("../../pages/compareExpenses.page");
 
 describe("Traditional Tests - Login Page:", function() {
 
-    describe("Login Page UI Elements Test", function() {
+    describe.skip("Login Page UI Elements Test", function() {
 
         before(function() {
             loginPage.open();
@@ -78,7 +78,7 @@ describe("Traditional Tests - Login Page:", function() {
         });
     });   
 
-    describe("Data-Driven Test", function() {
+    describe.skip("Data-Driven Test", function() {
 
         beforeEach(function() {
             // Reload the Login Page before each test to reset and validation displayed.
@@ -126,7 +126,7 @@ describe("Traditional Tests - Login Page:", function() {
         it("Clicking 'Amounts' sorts the values in ascending order", function() {
             // Our getNumericalAmountValues function returns us all the numerical values from the Amounts column in their current order
             const amountsBeforeSorting = mainDashboard.getNumericalAmountValues();
-            // Use Lodash (A JavaScript Utility Library) to sort amountsBeforeSorting in ascending order 
+            // For simplicity, I'm using Lodash (A JavaScript Utility Library) to sort the amountsBeforeSorting array into ascending order 
             const expectedResult = _.sortBy(amountsBeforeSorting);
             
             // Click the Amounts Table Header to sort the amounts in ascending order
@@ -224,15 +224,15 @@ describe("Traditional Tests - Login Page:", function() {
 
         it("Validating the number of bars and their heights", function() {
             // Ideally, this chart data would be coming from a request which I could perform validation on.
-            // I can see the JavaScript tag below "#container"
-            // I honestly have no idea how to do this using the 'traditional' way.
+            // I can see the JavaScript tag below "#container"...
+            // But I honestly have no idea how to do this using the 'traditional' way.
         });
 
         it("Clicking 'Show Data For Next Year' adds the desired data to the chart", function() {
             compareExpensesPage.$showDataForNextYearButton.click();
             // Ideally, this chart data would be coming from a request which I could perform validation on.
-            // I can see the JavaScript tag below "#container"
-            // I honestly have no idea how to do this using the 'traditional' way.
+            // I can see the JavaScript tag below "#container"...
+            // But I honestly have no idea how to do this using the 'traditional' way.
         });
 
     });
@@ -251,15 +251,15 @@ describe("Traditional Tests - Login Page:", function() {
 
         it("Cyber Monday: Expects the correct gif to be displayed", function() {
             const image = mainDashboard.$gifCyberMondayFlashSale.selector;
-            const imagePath = actions.getElementAttribute(image, "src");
             expect(image).to.be.displayed();
+            const imagePath = actions.getElementAttribute(image, "src");
             expect(imagePath, "The actual image displayed is not the expected image").to.contain("/flashSale.gif");
         });
 
         it("Flash Sale: Expects the correct gif to be displayed", function() {
             const image = mainDashboard.$gifFlashSale.selector;
-            const imagePath = actions.getElementAttribute(image, "src");
             expect(image).to.be.displayed();
+            const imagePath = actions.getElementAttribute(image, "src");
             expect(imagePath, "The actual image displayed is not the expected image").to.contain("/flashSale2.gif");
         });
         

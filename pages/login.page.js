@@ -1,6 +1,5 @@
 const waitUntil = require("../utils/waits");
-let version;
-process.env.VERSION ? version = process.env.VERSION : version = "";
+const version = process.env.VERSION || "";
 
 class LoginPage {
     // Login Page Elements:
