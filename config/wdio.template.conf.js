@@ -1,3 +1,6 @@
+// Allows us to use a ".env" file at the root of our project to store Env Variables
+require('dotenv').config();
+
 exports.config = {
     runner: "local",
     //
@@ -37,6 +40,6 @@ exports.config = {
         expect = require('chai').expect;
         chaiWebdriver = require('chai-webdriverio').default;
         chai.use(chaiWebdriver(browser));
-        browser.maximizeWindow()
+        browser.maximizeWindow();
     }
 }

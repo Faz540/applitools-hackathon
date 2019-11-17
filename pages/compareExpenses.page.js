@@ -1,5 +1,3 @@
-const waitUntil = require("../utils/waits");
-
 class CompareExpenses {
     // Compare Expenses Page Elements:
     get $canvasChart() { return $("#canvas") };

@@ -2,7 +2,7 @@ const templateConfig = require("../wdio.template.conf").config;
 
 const v2Config = {
     ...templateConfig,
-    baseUrl: "https://demo.applitools.com/hackathonV2.html",
+    baseUrl: "https://demo.applitools.com",
     specs: [
         "./tests/hackathon/VisualAITests.spec.js"
     ],

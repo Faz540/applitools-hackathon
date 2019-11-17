@@ -8,7 +8,7 @@ const compareExpensesPage = require("../../pages/compareExpenses.page");
 
 describe("Traditional Tests - Login Page:", function() {
 
-    describe.skip("Login Page UI Elements Test", function() {
+    describe("Login Page UI Elements Test", function() {
 
         before(function() {
             loginPage.open();
@@ -78,7 +78,7 @@ describe("Traditional Tests - Login Page:", function() {
         });
     });   
 
-    describe.skip("Data-Driven Test", function() {
+    describe("Data-Driven Test", function() {
 
         beforeEach(function() {
             // Reload the Login Page before each test to reset and validation displayed.
