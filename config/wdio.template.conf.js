@@ -17,7 +17,7 @@ exports.config = {
         browserName: "chrome",
     }],
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: "error",
+    logLevel: "silent",
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
     // Default timeout in milliseconds for request

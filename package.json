@@ -7,12 +7,15 @@
     "test:traditional:v1": "wdio ./config/traditional/v1.conf.js",
     "test:traditional:v2": "VERSION=V2 wdio ./config/traditional/v2.conf.js",
     "test:visual:v1": "wdio ./config/visual/v1.conf.js",
-    "test:visual:v2": "VERSION=V2 wdio ./config/visual/v2.conf.js"
+    "test:visual:v2": "VERSION=V2 wdio ./config/visual/v2.conf.js",
+    "test:sdk": "wdio ./config/visual/sdk.conf.js"
   },
   "keywords": [],
   "author": "Paul Farrell",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-selenium": "^4.31.18",
+    "@applitools/eyes.webdriverio": "^2.11.2",
     "@wdio/applitools-service": "^5.13.2",
     "@wdio/cli": "^5.15.6",
     "@wdio/dot-reporter": "^5.15.2",
