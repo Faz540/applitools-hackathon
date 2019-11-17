@@ -102,7 +102,7 @@ describe("WebdriverIO v5 with Applitools Eyes SDK:", function () {
 
         it("Blank Username & Password - Validation is displayed when submitted", async function() {
             await eyes.open(browser, appName, this.test.title, viewPortSize);
-            loginPage.submitForm("", "");
+            await loginPage.submitForm("", "");
             await eyes.check("Login Form - Blank Username & Password Validation", Target.region(".alert-warning"));
         });
 
