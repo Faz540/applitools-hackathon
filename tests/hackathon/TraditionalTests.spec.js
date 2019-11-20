@@ -8,7 +8,7 @@ const compareExpensesPage = require("../../pages/compareExpenses.page");
 
 describe("Traditional Tests - Login Page:", function() {
 
-    describe("Login Page UI Elements Test", function() {
+    describe("Login Page UI Elements Tests", function() {
 
         before(function() {
             loginPage.open();
@@ -78,7 +78,7 @@ describe("Traditional Tests - Login Page:", function() {
         });
     });   
 
-    describe("Data-Driven Test", function() {
+    describe("Data-Driven Tests", function() {
 
         beforeEach(function() {
             // Reload the Login Page before each test to reset and validation displayed.
@@ -110,7 +110,7 @@ describe("Traditional Tests - Login Page:", function() {
         });
     });
 
-    describe("Table Sort Test", function() {
+    describe("Table Sort Tests", function() {
 
         before(function() {
             loginPage.open();
@@ -206,7 +206,7 @@ describe("Traditional Tests - Login Page:", function() {
         });
     });
 
-    describe.skip("Canvas Chart Test", function() {
+    describe.skip("Canvas Chart Tests", function() {
 
         before(function() {
             loginPage.open();
@@ -237,7 +237,7 @@ describe("Traditional Tests - Login Page:", function() {
 
     });
 
-    describe("Dynamic Content Test", function() {
+    describe("Dynamic Content Tests", function() {
 
         before(function() {
             loginPage.open();

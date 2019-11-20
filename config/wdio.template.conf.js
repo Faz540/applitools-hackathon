@@ -26,6 +26,7 @@ exports.config = {
     connectionRetryCount: 3,
     framework: "mocha",
     reporters: ["spec"],
+    services: ["chromedriver"],
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {

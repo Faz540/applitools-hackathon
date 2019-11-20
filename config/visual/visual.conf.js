@@ -7,7 +7,6 @@ const v1Config = {
         "./tests/hackathon/VisualAITests.spec.js"
     ],
     services: ["chromedriver","applitools"],
-    //applitoolsKey: process.env.APPLITOOLS_KEY,
     applitools: {
         apiKey: process.env.APPLITOOLS_KEY,
         matchTimeOut: 10000,

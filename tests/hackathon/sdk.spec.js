@@ -21,83 +21,85 @@ describe("WebdriverIO v5 with Applitools Eyes SDK:", function () {
         await eyes.closeAsync();
     });
         
-    describe.skip("Login Page UI Elements Test", function() {
+    // describe.skip("Login Page UI Elements Test", function() {
         
-        before(function() {
-            loginPage.open();
-        });
+    //     before(async function() {
+    //         await loginPage.open();
+    //     });
 
-        it("Logo is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Logo", Target.region(".logo-w img"));
-        });
+    //     it("Logo is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Logo", Target.region(".logo-w img"));
+    //     });
         
-        it("Form Header is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Form Header", Target.region(".auth-header"));
-        });
+    //     it("Form Header is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Form Header", Target.region(".auth-header"));
+    //     });
         
-        it("'Username' icon is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Username Icon", Target.region("#username + .pre-icon"));
-        });
+    //     it("'Username' icon is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Username Icon", Target.region("#username + .pre-icon"));
+    //     });
         
-        it("'Username' field label is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Username Field Label", Target.region("//label[text()='Username']"));
-        });
+    //     it("'Username' field label is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Username Field Label", Target.region("//label[text()='Username']"));
+    //     });
         
-        it("'Username' input field is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Username Input Field", Target.region("#username"));
-        });
+    //     it("'Username' input field is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Username Input Field", Target.region("#username"));
+    //     });
         
-        it("'Password' icon is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Password Icon", Target.region("#password + .pre-icon"));
-        });
+    //     it("'Password' icon is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Password Icon", Target.region("#password + .pre-icon"));
+    //     });
         
-        it("'Password' field label is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Password Field Label", Target.region("//label[text()='Password']"));
-        });
+    //     it("'Password' field label is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Password Field Label", Target.region("//label[text()='Password']"));
+    //     });
         
-        it("'Password' input field is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Password Input Field", Target.region("#password"));
-        });
+    //     it("'Password' input field is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Password Input Field", Target.region("#password"));
+    //     });
         
-        it("'Log In' submit button is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Log In Submit Button", Target.region("#log-in"));
-        });
+    //     it("'Log In' submit button is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Log In Submit Button", Target.region("#log-in"));
+    //     });
         
-        it("'Remember Me' checkbox is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Remember me Checkbox", Target.region(".form-check-label"));
-        });
+    //     it("'Remember Me' checkbox is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Remember me Checkbox", Target.region(".form-check-label"));
+    //     });
         
-        it("Twitter Image Link is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Twitter Icon", Target.region("img[src*='twitter']"));
-        });
+    //     it("Twitter Image Link is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Twitter Icon", Target.region("img[src*='twitter']"));
+    //     });
         
-        it("Facebook Image Link is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - Facebook Icon", Target.region("img[src*='facebook']"));
-        });
+    //     it("Facebook Image Link is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - Facebook Icon", Target.region("img[src*='facebook']"));
+    //     });
         
-        it("LinkedIn Image Link is displayed", async function() {
-            await eyes.open(browser, appName, this.test.title, viewPortSize);
-            await eyes.check("Login Form - LinkedIntter Icon", Target.region("img[src*='linkedin']"));
-        });
-    });
+    //     it("LinkedIn Image Link is displayed", async function() {
+    //         await eyes.open(browser, appName, this.test.title, viewPortSize);
+    //         await eyes.check("Login Form - LinkedIntter Icon", Target.region("img[src*='linkedin']"));
+    //     });
+    // });
 
-    describe("Data-Driven Test", function() {
+    describe("Data-Driven Test", async function() {
 
-        beforeEach(function() {
+        beforeEach(async function() {
             // Reload the Login Page before each test to reset and validation displayed.
-            loginPage.open();
+            await loginPage.open();
+            // const val = await $("#username");
+            // await val.setValue("test");
         });
 
         it("Blank Username & Password - Validation is displayed when submitted", async function() {

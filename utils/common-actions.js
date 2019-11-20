@@ -1,6 +1,17 @@
+const fs = require("fs-extra");
 const loginPage = require("../pages/login.page");
 
 class Actions {
+    removeAllFilesFromDirectory(directoryName) {
+        const directory = fs.readdirSync(`./${directoryName}`);
+        const screenshots = directory.filter(function(file) {
+            return !file.includes(".ignoreMe");
+        })
+        return screenshots.forEach(function(screenshot) {
+            return fs.removeSync(`./${directoryName}/${screenshot}`);
+        });
+    };
+
     initializeBrowser() {
         loginPage.open();
         return this.cleanSession() 

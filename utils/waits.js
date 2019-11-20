@@ -19,13 +19,13 @@ class WaitUntil {
     
     elementHasClass(element, expectedClass) {
         return browser.waitUntil(function() {
-            return element.getAttribute("class").split(" ").includes(expectedClass);
+            return $(element).getAttribute("class").split(" ").includes(expectedClass);
         }, 1000, `Waited 10 seconds and "${element}" did not have the class: "${expectedClass}"`);
     };
     
     elementHasAttributeValue(element, attribute, expectedValue) {
         return browser.waitUntil(function() {
-            return element.getAttribute(attribute).split(" ").includes(expectedValue);
+            return $(element).getAttribute(attribute).split(" ").includes(expectedValue);
         }, 10000, `Waited 10 seconds and "${attribute}" was not "${expectedValue}" for element: "${element}"`);
     };
 
