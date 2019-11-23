@@ -1,4 +1,4 @@
-const waitUntil = require("../utils/waits");
+const waitUntil = require("../../utils/async/waits");
 const version = process.env.VERSION || "";
 
 class LoginPage {
@@ -19,15 +19,21 @@ class LoginPage {
     get $linkedInImageLink() { return $("img[src*='linkedin']") };
     
     // Login Page Functions:
-    open() {
+    async open() {
         browser.url(`/hackathon${version}.html?showAd=true`);
-        return waitUntil.elementIsDisplayed(this.$loginButton);
+        const loginButton = await this.$loginButton;
+        return await waitUntil.elementIsDisplayed(loginButton);
     };
-   
-    submitForm(username, password) {
-        this.$username.setValue(username);
-        this.$password.setValue(password);
-        return this.$loginButton.click();
+
+    async submitForm(username, password) {
+        const user = await this.$username;
+        await user.setValue(username);
+
+        const pword = await this.$password;
+        await pword.setValue(password);
+
+        const logButton = await this.$loginButton;
+        return await logButton.click();
     };
 };
 

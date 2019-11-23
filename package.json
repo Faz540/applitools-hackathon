@@ -8,7 +8,8 @@
     "test:traditional:v2": "VERSION=V2 wdio ./config/traditional/traditional.conf.js",
     "test:visual:v1": "wdio ./config/visual/visual.conf.js",
     "test:visual:v2": "VERSION=V2 wdio ./config/visual/visual.conf.js",
-    "test:sdk": "wdio ./config/visual/sdk.conf.js"
+    "test:sdk:v1": "wdio ./config/visual/sdk.conf.js",
+    "test:sdk:v2": "VERSION=V2 wdio ./config/visual/sdk.conf.js"
   },
   "repository": {
     "type": "git",

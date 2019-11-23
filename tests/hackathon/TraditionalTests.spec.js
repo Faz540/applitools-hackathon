@@ -81,7 +81,7 @@ describe("Traditional Tests - Login Page:", function() {
     describe("Data-Driven Tests", function() {
 
         beforeEach(function() {
-            // Reload the Login Page before each test to reset and validation displayed.
+            // Reload the Login Page before each test to reset any validation displayed.
             loginPage.open();
         });
 
@@ -234,7 +234,6 @@ describe("Traditional Tests - Login Page:", function() {
             // I can see the JavaScript tag below "#container"...
             // But I honestly have no idea how to do this using the 'traditional' way.
         });
-
     });
 
     describe("Dynamic Content Tests", function() {
@@ -262,7 +261,5 @@ describe("Traditional Tests - Login Page:", function() {
             const imagePath = actions.getElementAttribute(image, "src");
             expect(imagePath, "The actual image displayed is not the expected image").to.contain("/flashSale2.gif");
         });
-        
     });
-
 });
