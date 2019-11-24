@@ -7,10 +7,10 @@ class LoginPage {
     get $formHeader() { return $(".auth-header") };
     get $loginValidation() { return $(".alert-warning") };
     get $usernameIcon() { return $("#username + .pre-icon") };
-    get $usernameLabel() { return $("//label[text()='Username']") };
+    get $usernameLabel() { return $(".form-group:nth-child(1) > label") };
     get $username() { return $("#username") };
     get $passwordIcon() { return $("#password + .pre-icon") };
-    get $passwordLabel() { return $("//label[text()='Password']") };
+    get $passwordLabel() { return $(".form-group:nth-child(2) > label") };
     get $password() { return $("#password") };
     get $loginButton() { return $("#log-in") };
     get $rememberMeCheckbox() { return $(".form-check-label") };

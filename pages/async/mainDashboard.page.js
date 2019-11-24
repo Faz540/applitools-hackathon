@@ -1,6 +1,7 @@
 class MainDashboard {
     // Main Dashboard Elements:
     get $content() { return $(".content-i") };
+    get $topMenu() { return $(".top-bar") }
     get $compareExpensesButton() { return $("#showExpensesChart") };
     get $finanicalOverviewSection() { return $(".element-balances") };
     get $transactionTable() { return $("#transactionsTable") };
